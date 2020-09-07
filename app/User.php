@@ -69,4 +69,10 @@ class User extends Authenticatable
 
         return 'images/profile/'.$this->avatar_url;
     }
+
+
+    public function messages(){
+        return $this->hasMany('App\Message');
+    }
+
 }

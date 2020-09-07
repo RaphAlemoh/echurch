@@ -10149,19 +10149,16 @@ body {
 
 .sb-sidenav-dark {
   background-color: gray;
-  color: gold;
+  color: skyblue;
 }
 .sb-sidenav-dark .sb-sidenav-menu .sb-sidenav-menu-heading {
-  /* color: rgba(255, 255, 255, 0.25); */
-  color: gold;
+  color: skyblue;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link {
-  /* color: rgba(255, 255, 255, 0.945);*/
-  color: gold;
+  color: skyblue;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-nav-link-icon {
-  /* color: rgba(255, 255, 255, 0.911); */
-  color: gold;
+  color: skyblue;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link .sb-sidenav-collapse-arrow {
   color: rgba(255, 255, 255, 0.25);
@@ -10211,11 +10208,11 @@ body {
 
 .footer-style, footer a{
   background-color:gray;
-  color: gold;
+  color: skyblue;
 }
 
 .btn-style{
-  background-color: rgb(219, 187, 4);
+  background-color: rgb(230, 227, 212);
   color: white;
 }
 

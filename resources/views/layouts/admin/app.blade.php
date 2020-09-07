@@ -87,7 +87,7 @@
                     ></a>
                     <div class="collapse" id="pagesCollapseProduct" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="{{ route('media.index') }}">{{ __('Media') }}</a>
+                                <a class="nav-link" href="{{ url('media.index') }}">{{ __('Media') }}</a>
                         </nav>
                 </div>
                 

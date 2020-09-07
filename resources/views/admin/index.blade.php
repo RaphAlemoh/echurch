@@ -32,10 +32,10 @@
 
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-dark text-white mb-4">
-                        <div class="card-header">Categories</div>
-                <div class="card-body">Total Categories: {{ $products }}</div>
+                        <div class="card-header">Media</div>
+                <div class="card-body">Total Media: {{ $media }}</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="{{ url('categories') }}">View More</a>
+                    <a class="small text-white stretched-link" href="{{ url('media') }}">View More</a>
                         <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -43,10 +43,10 @@
 
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-warning text-white mb-4">
-                        <div class="card-header">Products</div>
-                <div class="card-body">Total Products: {{ $products }}</div>
+                        <div class="card-header">Chat</div>
+                <div class="card-body">Total Chat: {{ $chats }}</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="{{ url('products') }}">View More</a>
+                    <a class="small text-white stretched-link" href="{{ url('chats') }}">View More</a>
                         <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -54,10 +54,10 @@
 
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-success text-white mb-4">
-                    <div class="card-header">Orders</div>
-                    <div class="card-body">Total Orders: {{ $orders }}</div>
+                    <div class="card-header">Subscribers</div>
+                    <div class="card-body">Total Subscribers: {{ $subscribers }}</div>
                     <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="{{ url('allorders') }}">View All</a>
+                    <a class="small text-white stretched-link" href="{{ url('subscribers') }}">View All</a>
                         <div class="small text-white"><i class="fa fa-angle-right"></i></div>
                     </div>
                 </div>
@@ -72,8 +72,6 @@
                                 <thead>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Order Code</th>
-                                        <th>Amount</th>
                                         <th>Date</th>
                                         <th>Status</th>
                                         <th>Action</th>
@@ -82,40 +80,32 @@
                                 <tfoot>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Order Code</th>
-                                        <th>Amount</th>
                                         <th>Status</th>
                                         <th>Date</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
-                                    @forelse ($new_orders as $new_order)
+                                    @forelse ($new_messages as $new_message)
                                     <tr>
-                                            @php
-                                            if(empty($new_order->user['name'])){
-                                                $name = $new_order['visitor_email'];
-                                            }else{
-                                                $name = $new_order->user['name'];
-                                            }
+                                        @php
+                                            $name = $new_message->user['name'];
                                         @endphp
                                     <td> {{ $name }}</td>
-                                        <td>{{ $new_order->order_code }}</td>
-                                        <td>{{ $new_order->amount }}</td>
-                                        @if ($new_order->payment_status == 'PAID')
-                                        <td class="success"> {{ __('Paid')}} </td>
+                                        @if ($new_message->status == '1')
+                                        <td class="success"> {{ __('Read')}} </td>
                                         @else
-                                        <td class="danger"> {{ __('Not Paid')}} </td>
+                                        <td class="danger"> {{ __('Not Read')}} </td>
                                          @endif
-                                        <td>{{ $new_order->updated_at }}</td>
+                                        <td>{{ $new_message->updated_at }}</td>
                                         
                                         <td>
-                                            <a href="{{ url('order/' . $new_order->id ) }}" title="View this order"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                            <a href="{{ url('message/' . $new_message->id ) }}" title="View this message"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                         </td>
                                     </tr>                                        
                                     @empty
                                         <div class="text text-center text-danger">
-                                            <p>No New Orders!</p>
+                                            <p>No New Messages!</p>
                                         </div>
                                     @endforelse
                                 </tbody>
