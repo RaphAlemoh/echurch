@@ -4,6 +4,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/tv', 'TvController@tv')->name('tv');
+Route::get('/blog', 'BlogController@blog')->name('blog');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

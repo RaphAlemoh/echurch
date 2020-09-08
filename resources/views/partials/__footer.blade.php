@@ -1,7 +1,7 @@
-<div class="mt-5 pt-3 pb-5 footer">
+<div class="mt-5 pt-3 pb-3 footer">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-5 col-xs-12 about-church mt-2">
+        <div class="col-12 col-lg-5 col-xs-12 about-church mt-4">
           <h2>eChurch</h2>
           <p class="pr-5 text-white-50">
             eChurch is an online platform for fellowship, live streaming and other activities.....
@@ -26,7 +26,7 @@
               <li>- <a href="#">Administration</a></li>
             </ul>
         </div>
-        <div class="col-lg-4 col-xs-12 location mt-2">
+        <div class="col-lg-4 col-xs-12 location mt-4">
           <h4 class="mt-lg-0 mt-sm-4">Location</h4>
           <p><i class="fa fa-address-book fa-lg" aria-hidden="true"></i> 
                 No. 8 off eChurch avenue ..... Nigeria
@@ -41,14 +41,13 @@
         </p>
         </div>
       </div>
-      <div class="row mt-2">
+      <div class="row mt-4">
         <div class="col copyright">
-          <p class="mb-0"><small class="text-white-50"> ©eChurch 2020. by 
-              <a href="https://www.twitter.com/alemsbaja">@alemsbaja</a>
+          <p class="mb-0"><small class="text-white-100"> ©eChurch 2020. by 
+              <a href="https://www.twitter.com/alemsbaja" class="twitter_handle" >@alemsbaja</a>
               All Rights Reserved.</small>
         </p>
         </div>
       </div>
     </div>
     </div>
-    

@@ -38,6 +38,13 @@ html, body{
   width: 200px;
 }
 
+.abs-center-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
 #search .form-inline .input-group-text{
   border-radius: 40px !important;
   border-bottom-right-radius: 0px !important;
@@ -252,6 +259,7 @@ html, body{
   background: #526275;
   color: white;
 }
+
 .footer .links ul {
   list-style-type: none;
 }
@@ -282,8 +290,18 @@ html, body{
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.copyright{
+  font-size: 1.0rem;
+}
+
+.twitter_handle:hover{
+  color: skyblue;
+}
+
+
+
 .footer {
-    margin-top: 50px;
+    margin-top: 5px;
 }
  .footer .fa{
     font-size: 2em;
@@ -302,10 +320,6 @@ html, body{
 .fa-instagram{
     color: #ee2a44;
 }
-.footer-copy{
-    font-size: 1.0rem;
-}
-
 
 
 

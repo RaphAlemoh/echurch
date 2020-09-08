@@ -25,7 +25,7 @@
           </div>
     </ul>
     
-    <div class="collapse navbar-collapse" id="main_nav">
+<div class="collapse navbar-collapse justify-content-between align-items-center w-100" id="main_nav">
         <div class="offcanvas-header mt-3">  
             <button class="btn btn-outline-danger btn-close pull-right btn-style"> &times Close </button>
             <h5 class="py-2 text-white"><a class="nav-link m-0 p-0" href="{{ url('/') }}">
@@ -34,15 +34,8 @@
                 eChurch</a></h5>
           </div>
     
-    {{-- <ul class="navbar-nav mr-auto mt-lg-0">
-        <li class="nav-item li-categories dropdown">
-            <a class="nav-link dropdown-toggle categories" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-list" aria-hidden="true"></i>Media</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId" id="append-categories">
-            </div>
-        </li>
-    </ul> --}}
-    <div id="search" class="navbar-nav m-auto pl-4">
+
+<ul id="search" class="navbar-nav abs-center-x">
     <form class="form-inline d-none d-lg-block" action="{{ url('search') }}" method="GET"> 
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -54,15 +47,15 @@
                 <div id="search_result" class="dropdown-menu search_result_dropdown"></div>                        
             </div>
     </form>    
-    </div>
+</ul>
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('/') }}">
+            <a class="nav-link" href="{{ route('blog') }}">
                     Blog
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('/') }}">
+            <a class="nav-link" href="{{ route('tv') }}">
                     TV
             </a>
         </li>

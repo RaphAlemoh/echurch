@@ -38,17 +38,18 @@ html5shiv.js"></script>
 min.js"></script>
 <![endif]-->
 </head>
-<body class="">
-<div id="app">
+<body class="d-flex flex-column min-vh-100">
+    <header>
+    @include('partials.__navbar')        
+    </header>
     
-    @include('partials.__navbar')
+    {{-- <div class="wrapper flex-grow-1"> --}}
+        @yield('content')
+    {{-- </div> --}}
 
-    @yield('content')
-
-    <div class="footer-section">
+    <footer class="mt-auto">
         @yield('footer') 
-    </div>
-</div>
+    </footer>
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -59,7 +60,7 @@ $(document).ready(function(){
 
     $(document).on('click', '.open-overlay-search', function(){
         $('.search-overlay').css('display', 'block');
-        let clone_search_form = $('#search').clone(true);
+        let clone_search_form = $('#search').attr('class', 'navbar-nav').clone(true);
         $('.search-overlay-content').append(clone_search_form).fadeIn("fast");
         $('.search-overlay-content').find('.form-inline').attr('class', 'form-inline d-lg-none');
     });
@@ -93,17 +94,6 @@ $(document).on('click', '#search-li', function(){
     $('#keyword_search').val($(this).text());
     $('#search_result').fadeIn();
 })
-
-// $(document).on('click', '.categories', function(){
-//     $.ajax({
-//         type: "GET",
-//         url: "/show/categories",
-//         data: null,
-//         success:function(data){
-//             $('#append-categories').html(data).fadeIn("fast");
-//         }
-//     });
-// });
 
 })
 
