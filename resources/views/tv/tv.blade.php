@@ -2,7 +2,7 @@
 @section('title', 'eChurch TV')
 @section('content')
 <div class="container">
-    <div class="row p-0 m-0 justify-content-center">
+    <div class="row p-0 m-0 justify-content-center mt-2">
         <div class="col-12 col-lg-8">
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
