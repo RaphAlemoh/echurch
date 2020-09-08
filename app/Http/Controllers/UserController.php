@@ -11,7 +11,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use App\User;
 use App\Role;
 
-class UsersController extends Controller
+class UserController extends Controller
 {
     use RegistersUsers;
 
