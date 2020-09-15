@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="keywords" content="design, fashion, outfits, fashion in Nigeria, cool fashion designs, male outfit, agabda, kafatn, suit" />
-    <meta name="description" content="Pettacouture is the best place to get your outfit in Nigeria" />  
-    <link rel="shortcut icon" href="logo.png">
+    <meta name="keywords" content="service, mass, church, salvation, kingdom, God, deliverance, testimony, revival" />
+    <meta name="description" content="eChurch is an online platform that helps in taking the gospel to the world via the internet" />  
+    <link rel="shortcut icon" href="{{ asset('logo.png') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

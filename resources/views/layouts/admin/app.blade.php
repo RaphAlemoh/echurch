@@ -57,28 +57,16 @@
                         <a class="nav-link" href="{{ url('users/create') }}">Add User</a>
                     </nav>
                 </div>
-                {{-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
                         <div class="sb-nav-link-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></div>     
-                    Orders
+                    Blog
                         <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div
                     ></a>
                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="{{ url('allorders') }}">{{ __('Orders') }}</a>
+                            <a class="nav-link" href="{{ url('posts') }}">{{ __('Posts') }}</a>
                         </nav>
-                </div> --}}
-
-                {{-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseCategories" aria-expanded="false" aria-controls="pagesCollapseError">
-                        <div class="sb-nav-link-icon"><i class="fa fa-sort" aria-hidden="true"></i></div>     
-                    Categories
-                        <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div
-                    ></a>
-                    <div class="collapse" id="pagesCollapseCategories" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                        <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="{{ url('categories/') }}">{{ __('Categories') }}</a>
-                        </nav>
-                </div> --}}
-
+                </div>
 
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseProduct" aria-expanded="false" aria-controls="pagesCollapseError">
                         <div class="sb-nav-link-icon"><i class="fa fa-product-hunt" aria-hidden="true"></i></div>     
@@ -87,7 +75,7 @@
                     ></a>
                     <div class="collapse" id="pagesCollapseProduct" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="{{ url('media.index') }}">{{ __('Media') }}</a>
+                                <a class="nav-link" href="{{ url('media') }}">{{ __('Media') }}</a>
                         </nav>
                 </div>
                 

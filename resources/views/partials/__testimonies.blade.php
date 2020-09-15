@@ -9,8 +9,6 @@
             By the power of the Holy Spirit souls are been tranformed and healing is evident in our midst. 
             By the power of the Holy Spirit souls are been tranformed and healing is evident in our midst. 
             By the power of the Holy Spirit souls are been tranformed and healing is evident in our midst. 
-            By the power of the Holy Spirit souls are been tranformed and healing is evident in our midst. 
-            By the power of the Holy Spirit souls are been tranformed and healing is evident in our midst. 
         Take a loot a the testimony page for more... <a href=" {{  url('/testimonies') }} "></a>
         </div>
 

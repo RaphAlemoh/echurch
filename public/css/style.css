@@ -257,7 +257,8 @@ html, body{
 
 .footer {
   background: #526275;
-  color: white;
+  color: white; 
+   margin-top: 5px;
 }
 
 .footer .links ul {
@@ -297,12 +298,6 @@ html, body{
 .twitter_handle:hover{
   color: skyblue;
 }
-
-
-
-.footer {
-    margin-top: 5px;
-}
  .footer .fa{
     font-size: 2em;
     margin: .4rem;
@@ -320,9 +315,6 @@ html, body{
 .fa-instagram{
     color: #ee2a44;
 }
-
-
-
 
 
 .offcanvas-header{ display:none; }
@@ -350,28 +342,8 @@ html, body{
 }
 
 
+/* blog css */
 
-.slick-arrow-right,
-.slick-arrow-left {
-    position: absolute;
-    top: 30%;
-    display: block;
-    -webkit-transform: translate(0, -35%);
-    -ms-transform: translate(0, -35%);
-    transform: translate(0, -35%);
-
-    cursor: pointer;
-    background: #dbbb04;
-    color: white;
-    padding: 8px 10px;
-
-    z-index: 99;
-    border-radius: 100%;
-}
-
-.slick-arrow-left {
-  left: -7px;
-}
-.slick-arrow-right {
-  right: -7px;
+.inline-anchor{
+  display: inline-block;
 }

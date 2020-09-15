@@ -1,7 +1,7 @@
 <div class="mt-5 pt-3 pb-3 footer">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 col-lg-5 col-xs-12 about-church mt-4">
+        <div class="col-12 col-lg-5 col-xs-12 about-church mt-2">
           <h2>eChurch</h2>
           <p class="pr-5 text-white-50">
             eChurch is an online platform for fellowship, live streaming and other activities.....
@@ -26,18 +26,17 @@
               <li>- <a href="#">Administration</a></li>
             </ul>
         </div>
-        <div class="col-lg-4 col-xs-12 location mt-4">
-          <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-          <p><i class="fa fa-address-book fa-lg" aria-hidden="true"></i> 
-                No. 8 off eChurch avenue ..... Nigeria
-            </p>
-          <p><i class="fa fa-globe fa-lg"></i> Online, Nigeria.</p>
+        <div class="col-lg-4 col-xs-12 location links mt-2">
+          <h4 class="mt-lg-0 mt-sm-3">Location</h4>
+          <p><i class="fa fa-address-book fa-lg" aria-hidden="true"></i>No. 8 off eChurch avenue ..... Nigeria
+          </p>
+          <p><i class="fa fa-globe fa-lg"></i>Online, Nigeria.</p>
           
           <p class="mb-2"><a class="text-white underline" href="tel:+2348077842973">
-              <i class="fa fa-phone fa-lg mr-3"></i>+234....</a>
+              <i class="fa fa-phone fa-lg"></i>+234....</a>
           </p>
           <p>
-              <i class="fa fa-envelope-o fa-lg mr-3" aria-hidden="true"></i> echurch@echurch.com
+              <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>echurch@echurch.com
         </p>
         </div>
       </div>
