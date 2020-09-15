@@ -21,11 +21,14 @@
         </div>
 
         <div class="col-12 col-md-10 col-lg-8 mx-auto mt-4">
-            <div class="text-left">Comments</div>
+            <div>
+                <span class="header-text nav-link active pl-0 mb-0 text-dark">Comments</span>
+                <hr class="mt-0">
+            </div>
             
             @forelse ($post->comments as $comment)
-                <ul class="list-group">
-                    <li class="list-group-item border-0 border-bottom-1 mt-1">
+                <ul class="list-group mt-1">
+                    <li class="list-group-item border-1 border-bottom-1 mb-3 bg-light">
                         @if ($comment->user_id == '')
                             {{ $comment->user }}
                         @else
@@ -39,10 +42,8 @@
                         @if (Auth::user())
                         @if (Auth::user()->id == $comment->user_id )
                         <div class="text-right">
-                        {{-- <a href="#" class="nav-link inline-anchor edit-comment" data-id="{{ $comment->id }}" data-userid="{{ Auth::user()->id }}" > <i class="fa fa-eraser fa-lg" aria-hidden="true"></i>Edit</a> --}}
-                        <span href="#" class="nav-link inline-anchor edit-comment" data-id="{{ $comment->id }}" data-userid="{{ Auth::user()->id }}" > <i class="fa fa-eraser fa-lg" aria-hidden="true"></i>Edit</span>
-                            
-                        <a href="{{ url('delete/comment/'.$comment->id.'') }}" class="nav-link inline-anchor" ><i class="fa fa-trash fa-lg" aria-hidden="true" ></i>Delete</a>                            
+                        <span href="#" class="nav-link inline-anchor edit-comment" data-id="{{ $comment->id }}" data-userid="{{ Auth::user()->id }}" > <i class="fa fa-pencil fa-lg" aria-hidden="true"></i> Edit</span>                            
+                        <span class="nav-link inline-anchor" ><i class="fa fa-trash fa-lg" aria-hidden="true" ></i> Delete</span>                            
                         </div>
                         @endif
                         @endif
