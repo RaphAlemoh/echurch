@@ -19,8 +19,6 @@ class BlogController extends Controller
             $query->where('status', true);
         }])
         ->first();
-
-        // return $post->title;
         return view('blog.show')->with(compact('post'));
     }
 

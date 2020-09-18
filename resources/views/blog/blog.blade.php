@@ -20,10 +20,10 @@
                     Posted by<a href="#">{{ $post->user->name }}</a> on September 24, 2017
                 </div>
 
-                <div class="text-center post-action">
-                 <span><a href="#" class="pr-3"><i class="fa fa-thumbs-up" aria-hidden="true"></i>Likes </a></span>
-                 <span><a href=" {{ url('show/post/', $post->id) }} " class="pr-3"><i class="fa fa-comment" aria-hidden="true"></i>Comments </a></span>
-                 <span><a href="#" class="pr-3"><i class="fa fa-share" aria-hidden="true"></i>Share </a></span>
+                <div class="text-center post-action p-2">
+                 <span><a href="#" class="pr-3"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Like </a></span>
+                 <span><a href=" {{ url('show/post', $post->id) }} " class="pr-3"><i class="fa fa-comment" aria-hidden="true"></i> Comments </a></span>
+                 <span><a href="#" class="pr-3"><i class="fa fa-share" aria-hidden="true"></i> Share</a></span>
                 </div>
               </div>
                 </a>

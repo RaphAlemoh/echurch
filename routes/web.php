@@ -7,6 +7,7 @@ Route::get('/', function () {
 
 Route::get('/tv', 'TvController@tv')->name('tv');
 Route::get('/blog', 'BlogController@blog')->name('blog');
+Route::get('/media', 'MediaController@media')->name('media');
 Route::get('/show/post/{id}', 'BlogController@show')->name('show.blog.post');
 Route::post('post/comment/{post_id}', 'CommentController@comment')->name('comment.on.post');
 
@@ -21,9 +22,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 ///authenticated 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('edit/comment/', 'CommentController@edit')->name('edit.comment.on.post');
-    // Route::post('edit/comment/{comment_id}', 'CommentController@edit')->name('edit.comment.on.post');
-    Route::get('delete/comment/{comment_id}', 'CommentController@delete')->name('delete.comment.on.post');
+    Route::get('edit/comment/', 'CommentController@edit');
+    Route::post('update/comment', 'CommentController@update');
+    Route::get('delete/comment/{comment_id}', 'CommentController@delete');
+    Route::post('reply/comment/{reply_id}', 'ReplyController@reply');
+    Route::get('edit/reply', 'ReplyController@edit');
+    Route::post('update/reply', 'ReplyController@update');
+    Route::get('delete/reply/{reply_id}', 'ReplyController@delete');
 });
 
 
@@ -35,9 +40,11 @@ Route::group(['middleware' => ['auth', 'verified', 'checkRole:admin']], function
     Route::post('/admin/update-pwd', 'AdminController@updatePwd')->name('admin.updatePwd');
     Route::resource('users','UserController');
     Route::resource('posts','PostController');
-    Route::get('/show/notifications', 'OrderController@allNotifications');
-    Route::get('order/notification/{order_id}', 'OrderController@viewOrderNotification')->name('viewOrderNotification');
-    Route::get('view/notification/order/{notification_id}', 'HomeController@viewNotification')->name('viewNotifcation');
+    Route::resource('tvs','TvController');
+    Route::resource('medias','MediaController');
+    Route::get('/unapproved/comment/{comment_id}', 'CommentController@showCommentToApprove');
+    Route::get('approve/comment/{comment_id}', 'CommentController@approveComment');
+
 });
 
 //////Staff Routes///////
@@ -47,14 +54,13 @@ Route::group(['middleware' => ['auth', 'verified', 'checkRole:staff,admin']], fu
     Route::get('/admin/check-pwd', 'AdminController@checkPwd')->name('admin.checkPwd');
     Route::post('/admin/update-pwd', 'AdminController@updatePwd')->name('admin.updatePwd');;
     Route::resource('posts','PostController');
-    Route::get('order/notification/{order_id}', 'OrderController@viewOrderNotification')->name('viewOrderNotification');
-    Route::get('view/notification/order/{notification_id}', 'HomeController@viewNotification')->name('viewNotifcation');
-
-
+    Route::resource('tvs','TvController');
+    Route::resource('medias','MediaController');
+    Route::get('/unapproved/comment/{comment_id}', 'CommentController@showCommentToApprove');
+    Route::get('approve/comment/{comment_id}', 'CommentController@approveComment');
 });
 
 //////Customer Routes///////
 Route::group(['middleware' => ['auth', 'verified', 'checkRole:staff,admin,customer']], function () {
-    // Route::get('view/notification/order/{notification_id}', 'HomeController@viewNotification')->name('viewNotifcation');
 
 });

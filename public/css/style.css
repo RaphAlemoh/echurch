@@ -346,4 +346,5 @@ html, body{
 
 .inline-anchor{
   display: inline-block;
+  cursor: pointer;
 }

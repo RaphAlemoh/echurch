@@ -50,6 +50,11 @@
 </ul>
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('media') }}">
+                    Media
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('blog') }}">
                     Blog
             </a>
@@ -73,7 +78,7 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 <span class="fa fa-bell fa-lg">
                         {{-- @if (auth()->user()->unReadNotifications->count() > 0) --}}
-                        <sup class="text-success bg-white border-0 rounded" style="margin-left:-9px; padding:3px;">0</sup>
+                        {{-- <sup class="text-success bg-white border-0 rounded" style="margin-left:-9px; padding:3px;"></sup> --}}
                         {{-- @endif --}}
                 </span>
                 </a>    

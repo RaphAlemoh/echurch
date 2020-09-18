@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comment;
+use App\Reply;
 use Auth;
 
 class CommentController extends Controller
@@ -60,6 +61,7 @@ class CommentController extends Controller
             $comment = Comment::where(['user_id' => $user_id, 'id' => $comment_id])->first();
             if(!empty($comment)){
             return response()->json(array(
+                'id' => $comment->id,
                 'message' => $comment->comment,
                 'status' => 1
             ), 200);   
@@ -75,6 +77,19 @@ class CommentController extends Controller
         }
     }
 
+    public function update(Request $request){
+        $user_id = Auth::user()->id;
+            $this->validate($request, [
+                'comment' => 'required|string|max:255',
+        ]);
+        $data['comment'] = $request->comment;
+        $update = Comment::where(['user_id' => $user_id, 'id' => $request->comment_id])->update($data);
+        if($update){
+            return redirect()->back();
+        }
+
+    }
+
 
 
     public function delete(Request $request){
@@ -83,9 +98,26 @@ class CommentController extends Controller
         $comment = Comment::where(['id' => $comment_id, 'user_id' => $user_id])->delete(); 
         if ($comment)
         {
-            return redirect('users');
+            Reply::where(['comment_id' => $comment_id, 'user_id' => $user_id])->delete();
+
+            return redirect()->back()->withErrors('Comment deleted!');
         }  
     }
 
+
+    public function showCommentToApprove(Request $request){
+        $comment_id = $request->comment_id;
+        $comment = Comment::where(['id' => $comment_id])->first(); 
+        return view('admin.comment_approval')->with(compact('comment'));
+    }
+
+    public function approveComment(Request $request){
+        $comment_id = $request->comment_id;
+        $comment = Comment::where(['id' => $comment_id])->update(['status' => true]); 
+        if ($comment)
+        {
+            return redirect()->back()->with('success_msg', 'Comment Approved!');
+        }  
+    }
 
 }

@@ -83,4 +83,15 @@ class User extends Authenticatable
     public function comments(){
         return $this->hasMany(Comment::class);
     }
+
+
+    public function user_streaming(){
+        return $this->hasMany(Tv::class);
+    }
+
+
+    public function user_media(){
+        return $this->hasMany(Media::class);
+    }
+    
 }

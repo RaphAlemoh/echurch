@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="dns-prefetch" href="//fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="logo.png">
+<link rel="shortcut icon" href="{{ asset('logo.png') }}">
 
     <title>@yield('title')</title>
     <!-- CSRF Token -->
@@ -68,15 +68,25 @@
                         </nav>
                 </div>
 
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseProduct" aria-expanded="false" aria-controls="pagesCollapseError">
-                        <div class="sb-nav-link-icon"><i class="fa fa-product-hunt" aria-hidden="true"></i></div>     
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseMedia" aria-expanded="false" aria-controls="pagesCollapseError">
+                        <div class="sb-nav-link-icon"><i class="fa fa-camera" aria-hidden="true"></i></div>     
                     Media
                         <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div
                     ></a>
-                    <div class="collapse" id="pagesCollapseProduct" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                    <div class="collapse" id="pagesCollapseMedia" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="{{ url('media') }}">{{ __('Media') }}</a>
+                                <a class="nav-link" href="{{ url('medias') }}">{{ __('Media') }}</a>
                         </nav>
+                    </div>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseTv" aria-expanded="false" aria-controls="pagesCollapseError">
+                    <div class="sb-nav-link-icon"><i class="fa fa-television" aria-hidden="true"></i></div>     
+                TV
+                    <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div
+                ></a>
+                <div class="collapse" id="pagesCollapseTv" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{ url('tvs') }}">{{ __('TV') }}</a>
+                    </nav>                    
                 </div>
                 
 

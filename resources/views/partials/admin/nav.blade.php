@@ -7,27 +7,27 @@
                 <li class="nav-item admin-bell-dropdown dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         <span class="fa fa-bell fa-lg">
-                            {{-- @php
+                            @php
                                 $user = Auth::user() ;
                             @endphp
-                                @if(count(adminNotify($user)) > 0) --}}
-                                <sup class="text-warning bg-white border-0 rounded" style="margin-left:-10px; padding:2px;">0</sup>
-                                {{-- @endif --}}
+                                @if(count(adminNotify($user)) > 0)
+                        <sup class="text-warning bg-white border-0 rounded" style="margin-left:-10px; padding:2px;">{{ count(adminNotify($user)) }}</sup>
+                                @endif
                         </span>
                         </a> 
                         <div class="dropdown-menu">
-                            {{-- @if (adminNotify($user)->count() == 0)
+                            @if (adminNotify($user)->count() == 0)
                             <a class="dropdown-item">No Notification(s)</a>
                             @endif
                             @php
                                 $k = 0;
                             @endphp
-                            @foreach (adminNotify($user) as $order)
+                            @foreach (adminNotify($user) as $new_comment)
                             @php
                                 $k++;
                             @endphp
-                            <a href="{{ url('order/notification/'.$order->id ) }}" class="dropdown-item text-primary">{{ __('#'.$k . ' View Order status') }}</a>
-                            @endforeach --}}
+                            <a href="{{ url('/unapproved/comment', $new_comment->id ) }}" class="dropdown-item text-primary">{{ __('#'.$k . ' View Comment') }}</a>
+                            @endforeach
                         </div> 
                 </li>
 
