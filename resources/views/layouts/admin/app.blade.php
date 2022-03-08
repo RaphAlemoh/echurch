@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
     @yield('customstyle')
-  
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -58,7 +58,7 @@
                     </nav>
                 </div>
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                        <div class="sb-nav-link-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></div>     
+                        <div class="sb-nav-link-icon"><i class="fa fa-cart-plus" aria-hidden="true"></i></div>
                     Blog
                         <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div
                     ></a>
@@ -69,7 +69,7 @@
                 </div>
 
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseMedia" aria-expanded="false" aria-controls="pagesCollapseError">
-                        <div class="sb-nav-link-icon"><i class="fa fa-camera" aria-hidden="true"></i></div>     
+                        <div class="sb-nav-link-icon"><i class="fa fa-camera" aria-hidden="true"></i></div>
                     Media
                         <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div
                     ></a>
@@ -79,16 +79,16 @@
                         </nav>
                     </div>
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseTv" aria-expanded="false" aria-controls="pagesCollapseError">
-                    <div class="sb-nav-link-icon"><i class="fa fa-television" aria-hidden="true"></i></div>     
+                    <div class="sb-nav-link-icon"><i class="fa fa-television" aria-hidden="true"></i></div>
                 TV
                     <div class="sb-sidenav-collapse-arrow"><i class="fa fa-angle-down"></i></div
                 ></a>
                 <div class="collapse" id="pagesCollapseTv" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="{{ url('tvs') }}">{{ __('TV') }}</a>
-                    </nav>                    
+                    </nav>
                 </div>
-                
+
 
 @elseif (Auth::user()->hasRole('admin') || Auth::user()->hasRole('staff') )
 <a class="nav-link" href="{{ route('media.index') }}">{{ __('Media') }}</a>
@@ -104,7 +104,7 @@
     <div id="layoutSidenav_content">
         <main>
         @yield('content')
-        </main>       
+        </main>
     @include('partials.admin.footer')
     </div>
     </div>
@@ -148,16 +148,16 @@
 			}, error:function(){
 				alert('Error');
 			}
-		})            
+		})
         }else{
             $('.admin-password-update-btn').css('display', 'none');
         }
 
 	})
-	
-        
+
+
     });
-	
+
     </script>
         @yield('scripts')
 </body>

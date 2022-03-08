@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md sticky-top shadow-sm mb-0 bg-faded" role="navigation">
+<nav class="navbar navbar-expand-md sticky-top shadow-sm mb-0" role="navigation">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" 
         data-trigger="#main_nav" data-toggle="collapse"  aria-controls="main_nav" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
